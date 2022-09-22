@@ -1,0 +1,59 @@
+Welcome to React Core Concepts!
+
+# File Structure
+Inside React Project it has 3 folders:
+1) node_modules : all the component and Functional add here by React. We don't need to change or edit here.
+2) Public: here we have website icon, index.html file. we will show all our created file through this html file. also we can add html css Library, google font, font Awesome CDN here. In Root div div we will show all of our created component and styles.
+
+3. src(source): This folder is very Important Because we use most of our work here.
+here app.css & app.js is the most Important file. In app.js we will add all of our component here and app.js show that file via index.html.
+
+Rest of the file and images we don't use those files in this folder.
+
+# Install Tailwind And Daisyui
+
+# What is React? Why React?
+
+i) React is a JavaScript Library for Building User interfaces! Library Reusable Collection of Codes.
+ii) For Reducing duplicate code AKA DOM!
+iii) Creator Jordan Walke => 2011 > Fax] => 2013 > ReactJS
+iv) document.createElement() vs React.createElement,
+v) Component ReUseable
+vi) React is Awesome Because of Developer Experience!
+
+# Virtual Dom! (Very Important)
+
+i)DOM is Fast Enough but shows in the UI slow.
+ii) Replica of DOM > Virtual DOM (Real-life Example)
+iii) Diffing Algo / Reconciliation
+
+# Fundamentals of React !!
+
+1. JSX - JavaScript XML
+   Learning:
+   i) class => className, click onClick
+   ii) Diff ways to add style
+   iii)Can write valid js Expression code inside JSX through {}
+   iv) Can access object properties.
+
+2. Component
+   Learning:
+   i)what is a component? Functional Component! Component Vs Element!
+   ii) Component Inside Another Component
+   ii)Props in React! Passing data from Component To Component! Props Drilling
+
+!! Warning Don't Change Props Inside Component!
+iii) Create Multiple Components! Dynamic Component!
+
+3. Explain useState
+   state → State is the data that change. Props VS State!
+   i) Props Changed by Parent Component!
+   ii) State is the own data of that component!
+
+4. Explain useEffect
+   i) Done sideEffects that are not related to building UI
+   ii) Fetching Data from API.
+
+# Project
+
+# Extra Resources
