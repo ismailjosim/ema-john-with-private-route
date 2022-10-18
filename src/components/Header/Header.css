@@ -1,0 +1,42 @@
+.container {
+    background: #1C2B35;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #FF9900;
+}
+
+.active {
+    color: #FF9900;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
