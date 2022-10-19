@@ -23,7 +23,7 @@ const UserSignup = () => {
                 <input type="password" name='password' placeholder='Password' required />
 
                 <input type="password" name='confirmPass' placeholder='Confirm Password' required />
-                <button>Login</button>
+                <button>Sign Up</button>
             </div>
             <div className='form-link'>
                 <span>Already have an account?</span> <Link to="/login">Login</Link>
