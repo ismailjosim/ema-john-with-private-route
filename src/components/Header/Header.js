@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/UserContext';
 import logo from '../../images/Logo.svg';
 import './Header.css'
 const Header = () => {
+
+    const { user, userSignOut } = useContext(AuthContext);
+
+
     return (
         <div className='container'>
             <nav className='navbar'>
@@ -21,12 +26,16 @@ const Header = () => {
                     <li>
                         <Link to="/inventory" className="nav-link">Manage Inventory</Link>
                     </li>
-                    <li>
-                        <Link to="/login" className="nav-link">Login</Link>
-                    </li>
+                    {user?.uid ?
+                        <li>
+                            <a onClick={userSignOut} className="nav-btn">Logout</a>
+                        </li>
+                        : <li><Link to="/login" className="nav-link">Login</Link></li>
+
+                    }
                 </ul>
             </nav>
-        </div>
+        </div >
     );
 };
 

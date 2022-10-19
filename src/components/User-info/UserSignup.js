@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './UserCommon.css';
 import google from '../../images/google.png';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/UserContext';
 
 
 const UserSignup = () => {
+    const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState(null);
+
+
 
     const handleForm = event => {
         event.preventDefault();
@@ -12,7 +17,26 @@ const UserSignup = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirmPassword = form.confirmPass.value;
-        console.log(email, password, confirmPassword);
+
+
+        if (password.length < 6) {
+            setError('Password Should Be 6 characters or more');
+            return;
+        }
+        if (password !== confirmPassword) {
+            setError('Password did not match!');
+            return;
+        }
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch(error => {
+                console.error("Error Found", error);
+            })
     }
 
     return (
@@ -25,6 +49,7 @@ const UserSignup = () => {
                 <input type="password" name='confirmPass' placeholder='Confirm Password' required />
                 <button>Sign Up</button>
             </div>
+            <p className='error-message'>{error}</p>
             <div className='form-link'>
                 <span>Already have an account?</span> <Link to="/login">Login</Link>
             </div>

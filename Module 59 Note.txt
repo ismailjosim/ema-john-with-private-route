@@ -29,8 +29,8 @@ Auth integrate
 07. get form data: Remember to preventDefault() from button handle function
 08. getAuth in the userContext
 09. create user using email and password.
-10.
-11.
+10. add sign in functionality for existing user.
+11. onAuthStateChanged observer
 12.
 13.
 14.

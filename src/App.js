@@ -7,6 +7,8 @@ import Orders from './components/Orders/Orders';
 import { productAndCartLoader } from './components/Loaders/productsAndCartLoader';
 import UserLogin from './components/User-info/UserLogin';
 import UserSignup from './components/User-info/UserSignup';
+import Checkout from './components/Checkout/Checkout';
+import PrivateRoutes from './Routes/PrivateRoutes';
 
 
 
@@ -42,6 +44,12 @@ function App() {
         {
           path: '/signup',
           element: <UserSignup />
+        },
+        {
+          path: '/checkout',
+          element: <PrivateRoutes>
+            <Checkout />
+          </PrivateRoutes>
         }
       ]
     }

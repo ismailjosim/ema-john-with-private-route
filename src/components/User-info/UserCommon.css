@@ -93,3 +93,8 @@
     width: 40px;
 
 }
+
+.error-message {
+    color: #f30e79;
+    font-weight: 600;
+}
