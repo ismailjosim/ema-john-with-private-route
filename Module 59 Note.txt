@@ -18,7 +18,6 @@ Step: firebase
 6. export app from firebase.config.js
 7. setup Route.
 
-
 --------------------------------------
 Auth integrate
 01. create userContext (Auth). Remember here userContext is just a component.

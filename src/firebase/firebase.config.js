@@ -5,15 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyD8ctBnud4w4s4_OowoB-Ruu03oEl3Nozg",
-    authDomain: "ema-john-simple-auth-54968.firebaseapp.com",
-    projectId: "ema-john-simple-auth-54968",
-    storageBucket: "ema-john-simple-auth-54968.appspot.com",
-    messagingSenderId: "249297653660",
-    appId: "1:249297653660:web:4969c15817d7243aae8259"
+    apiKey: "AIzaSyDCG1BycOLFVBfWsaSOrbmkU8TLCzo3LaI",
+    authDomain: "ema-john-simple-4bb53.firebaseapp.com",
+    projectId: "ema-john-simple-4bb53",
+    storageBucket: "ema-john-simple-4bb53.appspot.com",
+    messagingSenderId: "792761125643",
+    appId: "1:792761125643:web:195582674f8d35eeaaf00e"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 export default app;

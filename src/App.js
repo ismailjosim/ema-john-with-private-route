@@ -3,9 +3,10 @@ import './App.css';
 import Main from './Layouts/Main';
 import Shop from './components/Shop/Shop';
 import Inventory from './components/Inventory/Inventory';
-import About from './components/About/About';
 import Orders from './components/Orders/Orders';
 import { productAndCartLoader } from './components/Loaders/productsAndCartLoader';
+import UserLogin from './components/User-info/UserLogin';
+import UserSignup from './components/User-info/UserSignup';
 
 
 
@@ -30,16 +31,17 @@ function App() {
           element: <Inventory></Inventory>
         },
         {
-          path: '/about/:heroId',
-          loader: async ({ params }) => {
-            return fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${ params.heroId }`);
-          },
-          element: <About></About>
-        },
-        {
           path: '/orders',
           loader: productAndCartLoader,
           element: <Orders></Orders>
+        },
+        {
+          path: '/login',
+          element: <UserLogin />
+        },
+        {
+          path: '/signup',
+          element: <UserSignup />
         }
       ]
     }
