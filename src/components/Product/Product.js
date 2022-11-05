@@ -4,20 +4,13 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import './Product.css';
 
 const Product = ({ product, handleAddToCart }) => {
-    // const { product, handleAddToCart } = props;
-    const {
-        img,
-        name,
-        price,
-        ratings,
-        seller,
-    } = product;
-    // const handleAdd = (item) => { console.log(item) }
+    const { img, name, price, ratings, seller } = product;
+
 
 
     return (
         <div className='product-box'>
-            <img src={img ? img : 'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500'} alt="Product" />
+            <img src={img} alt="Product" />
             <h2 className='product-name'>{name}</h2>
             <div>
                 <h3 className="product-price">Price: ${price}</h3>

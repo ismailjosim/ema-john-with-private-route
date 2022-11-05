@@ -21,7 +21,7 @@ const Orders = () => {
 
     // add btn handle function
     const handleRemoveItem = id => {
-        const remaining = cart.filter(product => product.id !== id);
+        const remaining = cart.filter(product => product._id !== id);
         setCart(remaining);
         removeFromDb(id);
     }
@@ -30,7 +30,7 @@ const Orders = () => {
         <div className='shop-container'>
             <div className='cart-products'>
                 {
-                    cart.map(product => <CartItems key={product.id} product={product} handleRemoveItem={handleRemoveItem}></CartItems>)
+                    cart.map(product => <CartItems key={product._id} product={product} handleRemoveItem={handleRemoveItem}></CartItems>)
                 }
                 {
                     cart.length === 0 && <h2>Your Cart In Empty. <Link to="/shop">Go Shopping First!</Link> </h2>

@@ -41,17 +41,27 @@
     font-weight: 600;
     font-size: 17px;
     border-radius: 5px;
-    border: none;
+    border: 2px solid #FF9900;
     cursor: pointer;
-    transition: 0.3s ease-in;
+    transition: 0.1s ease-in;
+    background-color: #FF9900;
+    padding: 0.8rem 2rem;
 }
 
 .nav-btn:hover {
     color: #FF9900;
+    background-color: transparent;
 }
 
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
     }
+}
+
+.list-item {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    gap: 10px;
 }
